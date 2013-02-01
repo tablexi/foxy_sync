@@ -1,7 +1,7 @@
 require 'openssl'
 
 module FoxySync
-  module Form
+  module CartValidation
 
     #
     # Hashes form input names for cart validation

@@ -1,10 +1,19 @@
 require 'net/http'
 require 'uri'
-require 'nokogiri'
 
-
-module FoxySync
-  class Api
+module FoxySync::Api
+  #
+  # Use this class to send and receive messages to/from
+  # the FoxyCart API (http://wiki.foxycart.com/v/1.0/api).
+  # To use it create a new instance and then send it a message
+  # that corresponds to the FoxyCart API. All messages
+  # return an instance of +FoxySync::Api::Response+. For Example:
+  #
+  # api = FoxySync::Api.new
+  # reply = api.customer_get :customer_email => 'foo@bar.com'
+  #
+  # +Messenger+ instances respond to every API call in FoxyCart v1.0.
+  class Messenger
     URL = URI.parse "#{FoxySync.store_url}/api"
 
 
@@ -40,7 +49,7 @@ module FoxySync
     def method_missing(method_name, *args, &block)
       return super unless respond_to? method_name
       xml = api_request method_name, args.first || {}
-      ApiResponse.new xml
+      FoxySync::Api::Response.new xml
     end
 
 
@@ -71,33 +80,6 @@ module FoxySync
 
         raise e
       end
-    end
-  end
-
-
-  class ApiResponse
-    attr_reader :document
-
-    def initialize(xml)
-      @document = Nokogiri::XML(xml) {|config| config.strict.nonet }
-    end
-
-
-    def respond_to?(method_name, include_private = false)
-      true # respond to everything; we don't know what will be in the response doc
-    end
-
-
-    private
-
-    def method_missing(method_name, *args, &block)
-      node_set = @document.xpath "//#{method_name}"
-      return nil if node_set.nil? || node_set.empty?
-
-      contents = node_set.to_a
-      contents.map!{|node| node.content }
-      contents.delete_if{|content| content.empty? }
-      contents.size == 1 ? contents.first : contents
     end
   end
 end

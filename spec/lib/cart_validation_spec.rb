@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe FoxySync::Form do
+describe FoxySync::CartValidation do
 
-  let(:form) do
-    mock = double('form')
-    mock.class.send :include, FoxySync::Form
+  let :form do
+    mock = double 'form'
+    mock.class.send :include, FoxySync::CartValidation
     mock
   end
 

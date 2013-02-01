@@ -1,8 +1,14 @@
 module FoxySync
-  autoload :Form, 'foxy_sync/form'
-  autoload :Sso, 'foxy_sync/sso'
-  autoload :Api, 'foxy_sync/api'
-  autoload :Datafeed, 'foxy_sync/datafeed'
+  autoload :Sso,            'foxy_sync/sso'
+  autoload :Datafeed,       'foxy_sync/datafeed'
+  autoload :CartValidation, 'foxy_sync/cart_validation'
+
+  module Api
+    autoload :Messenger, 'foxy_sync/api/messenger'
+    autoload :Response,  'foxy_sync/api/response'
+    autoload :Base,      'foxy_sync/api/base'
+    autoload :Customer,  'foxy_sync/api/customer'
+  end
 
 
   def self.setup
