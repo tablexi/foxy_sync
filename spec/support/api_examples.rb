@@ -10,7 +10,7 @@ shared_examples 'api_setup' do
 
   let :reply do
     reply = double 'protocol.request'
-    reply.stub(:body).and_return ApiHelper::API_REPLY
+    reply.stub(:body).and_return API_REPLY
     reply
   end
 
@@ -30,7 +30,7 @@ shared_examples 'api_setup' do
 
 
   def api_request(email = 'sam@gmail.com')
-   api.customer_get :email => email
+   api.customer_get :customer_email => email
   end
 
 
