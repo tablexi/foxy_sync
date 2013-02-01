@@ -9,7 +9,7 @@ module FoxySync::Api
   # that corresponds to the FoxyCart API. All messages
   # return an instance of +FoxySync::Api::Response+. For Example:
   #
-  # api = FoxySync::Api.new
+  # api = FoxySync::Api::Messenger.new
   # reply = api.customer_get :customer_email => 'foo@bar.com'
   #
   # +Messenger+ instances respond to every API call in FoxyCart v1.0.
