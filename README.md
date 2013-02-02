@@ -6,7 +6,7 @@ A gem to synchronize your Ruby application with FoxyCart.
 It encapsulates the [FoxyCart](http://foxycart.com) [SSO](http://wiki.foxycart.com/v/1.0/sso),
 [Datafeed](http://wiki.foxycart.com/v/1.0/transaction_xml_datafeed), and
 [cart validation](http://wiki.foxycart.com/v/1.0/hmac_validation) protocols and abstracts the
-entire [FoxyCart API]:(http://wiki.foxycart.com/v/1.0/api).
+entire [FoxyCart API](http://wiki.foxycart.com/v/1.0/api).
 
 
 Installation
@@ -60,6 +60,8 @@ currently logged in user, if any.
 
 XML Datafeeds
 -------------
+
+It's in the works!
 
 
 FoxyCart API
