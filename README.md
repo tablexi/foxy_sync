@@ -43,7 +43,7 @@ input like this:
 ```<input type="hidden" value="mai" name="code||5651608dde5a2abeb51fad7099fbd1a026690a7ddbd93a1a3167362e2f611b53"/>```
 
 You would ```include FoxySync::CartValidation``` and output your hidden field with a name whose value is
-```input_name 'code', 'mai', 'mai'```
+```cart_input_name 'code', 'mai', 'mai'```
 
 
 Single Sign On
@@ -61,7 +61,24 @@ currently logged in user, if any.
 XML Datafeeds
 -------------
 
-It's in the works!
+FoxySync provides methods for decoding and decrypting the XML that is POST'd to your
+server when the [store datafeed option](http://wiki.foxycart.com/v/1.0/webhooks) is enabled.
+Typically done in a controller you would ```include FoxySync::Datafeed``` and, in the method
+that handles the datafeed request, parse the request parameter and read the XML:
+
+```
+  receipt = []
+  xml = datafeed_unwrap params
+  receipt << xml.customer_first_name
+  receipt << xml.customer_last_name
+  receipt << xml.receipt_url
+  # ... etc ....
+```
+
+Where ```params``` responds to [] and holds the 'FoxyData' parameter that FoxyCart sends
+(in Rails that's the ```params``` object). ```xml``` would be a ```FoxySync::Api::Response```.
+After handling FoxyCart expects a particular reply. The reply can be sent using the
+```datafeed_response``` method.
 
 
 FoxyCart API
