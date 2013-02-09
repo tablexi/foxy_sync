@@ -9,5 +9,6 @@ Gem::Specification.new do |s|
   s.files       = Dir[ File.expand_path './foxy_sync/lib/**/*', File.dirname(__FILE__) ]
 
   s.add_dependency 'nokogiri', [ '~> 1.5.5' ]
+  s.add_dependency 'ruby-rc4', [ '~> 0.1.5' ]
   s.add_development_dependency 'rspec', [ '~> 2.11.0' ]
 end
