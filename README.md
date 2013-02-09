@@ -4,7 +4,7 @@ FoxySync
 A gem to synchronize your Ruby application with FoxyCart.
 
 It encapsulates the [FoxyCart](http://foxycart.com) [SSO](http://wiki.foxycart.com/v/1.0/sso),
-[Datafeed](http://wiki.foxycart.com/v/1.0/transaction_xml_datafeed), and
+[Datafeed](http://wiki.foxycart.com/v/1.0/webhooks), and
 [cart validation](http://wiki.foxycart.com/v/1.0/hmac_validation) protocols and abstracts the
 entire [FoxyCart API](http://wiki.foxycart.com/v/1.0/api).
 
@@ -19,8 +19,7 @@ then run ```bundle install```. Otherwise you can ```gem install foxy_sync``` man
 Setup
 -----------
 
-You'll need to configure FoxySync before you can start using it. At the very least you should
-set your FoxyCart API key and store URL:
+You'll need to configure FoxySync. In particular you need to make known your FoxyCart API key and store URL.
 
 ```
 FoxySync.setup do |config|
@@ -29,16 +28,15 @@ FoxySync.setup do |config|
 end
 ```
 
-You should do this in an application startup file. In Rails, for example, it's best to put it in
+You should do this in an application startup file. In Rails it's best to put it in
 a file ```config/initializers/foxy_sync.rb```
 
 
 Cart validation
 --------------------
 
-FoxySync provides methods for creating form inputs that will validate with
-[FoxyCart's cart validation service](http://wiki.foxycart.com/v/1.0/hmac_validation). To create a hidden
-input like this:
+FoxySync provides methods to help with [FoxyCart's cart validation service](http://wiki.foxycart.com/v/1.0/hmac_validation).
+To create a hidden input like this:
 
 ```<input type="hidden" value="mai" name="code||5651608dde5a2abeb51fad7099fbd1a026690a7ddbd93a1a3167362e2f611b53"/>```
 
@@ -46,23 +44,21 @@ You would ```include FoxySync::CartValidation``` and output your hidden field wi
 ```cart_input_name 'code', 'mai', 'mai'```
 
 
-Single Sign On
+Single sign on
 --------------
 
-FoxySync provides methods for creating the URL applications redirect to during the
-[FoxyCart single sign on service handshake](http://wiki.foxycart.com/v/1.0/sso).
+FoxySync provides methods for helping with [FoxyCart's single sign on service](http://wiki.foxycart.com/v/1.0/sso).
 
-To get the redirect URL just ```include FoxySync::Sso``` and ```redirect_to sso_url(params, user)```.
+To create the URL that FoxyCart expects your server to redirect to just ```include FoxySync::Sso``` and ```redirect_to sso_url(params, user)```.
 The params argument should be something that responds to [] and holds the 'fcsid' and 'timestamp' parameters
 given by the FoxyCart SSO request (in Rails that's the ```params``` object). The user argument should be the
 currently logged in user, if any.
 
 
-XML Datafeeds
+XML datafeeds
 -------------
 
-FoxySync provides methods for decoding and decrypting the XML that is POST'd to your
-server when the [store datafeed option](http://wiki.foxycart.com/v/1.0/webhooks) is enabled.
+FoxySync provides methods for helping with [FoxyCart's datafeeds](http://wiki.foxycart.com/v/1.0/webhooks).
 Typically done in a controller you would ```include FoxySync::Datafeed``` and, in the method
 that handles the datafeed request, parse the request parameter and read the XML:
 
@@ -75,10 +71,10 @@ that handles the datafeed request, parse the request parameter and read the XML:
   # ... etc ....
 ```
 
-Where ```params``` responds to [] and holds the 'FoxyData' parameter that FoxyCart sends
+```params``` should respond to [] and hold the 'FoxyData' parameter that FoxyCart sends
 (in Rails that's the ```params``` object). ```xml``` would be a ```FoxySync::Api::Response```.
-After handling FoxyCart expects a particular reply. The reply can be sent using the
-```datafeed_response``` method.
+FoxyCart expects a particular reply when responding to its datafeed requests. The reply can be
+sent using the ```datafeed_response``` method.
 
 
 FoxyCart API
