@@ -2,8 +2,9 @@ require 'openssl'
 
 module FoxySync
   #
-  # Holds methods to help with FoxyCart's HMAC link and form (cart) validation
-  # (http://wiki.foxycart.com/v/1.0/hmac_validation)
+  # Holds methods to help with FoxyCart's HMAC link and form (cart)
+  # validation (http://wiki.foxycart.com/v/1.0/hmac_validation).
+  # Typically mixed into a view helper.
   module CartValidation
 
     #
