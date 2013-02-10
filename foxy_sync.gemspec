@@ -6,7 +6,9 @@ Gem::Specification.new do |s|
   s.description = 'Encapsulates FoxyCart SSO, Datafeed, and cart validation protocols'
   s.authors     = ['Chris Stump']
   s.email       = 'chris@tablexi.com'
-  s.files       = Dir[ File.expand_path './foxy_sync/lib/**/*', File.dirname(__FILE__) ]
+
+  cur_dir = File.expand_path('.', File.dirname(__FILE__))
+  s.files       = Dir[ File.join(cur_dir, './lib/**/*') ].each {|f| f.gsub!("#{cur_dir}/", '') }
 
   s.add_dependency 'nokogiri', [ '~> 1.5.5' ]
   s.add_dependency 'ruby-rc4', [ '~> 0.1.5' ]
