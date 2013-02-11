@@ -18,11 +18,22 @@ module FoxySync::Api
   # element in the XML reply.
   class Response
     #
-    # A +Nokogiri::XML::Document+ of the API reply
+    # The raw XML used to create this +Response+
+    attr_reader :xml
+
+
+    #
+    # A +Nokogiri::XML::Document+ of +#xml+
     attr_reader :document
 
 
     def initialize(xml)
+      self.xml = xml
+    end
+
+
+    def xml=(xml)
+      @xml = xml
       @document = Nokogiri::XML(xml) {|config| config.strict.nonet }
     end
 

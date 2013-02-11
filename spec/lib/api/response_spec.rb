@@ -28,6 +28,11 @@ describe FoxySync::Api::Response do
   end
 
 
+  it 'should give the raw XML' do
+    api_response.xml.should == API_REPLY
+  end
+
+
   it 'should return nil if the response doc does not have an element matching the method called' do
     api_response.foofam.should be_nil
   end
