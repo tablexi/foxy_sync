@@ -12,7 +12,8 @@ module FoxySync::Api
   # reply.customer_id # is the customer's FoxyCart id
   #
   # Every message will return +nil+ if no matching
-  # element is found in the XML reply, a +String+ if
+  # element is found in the XML reply or if the matched element(s)
+  # do not contain text or cdata, a +String+ if
   # there is one matching element in the reply, or an
   # +Array+ with all element values if there is more than one
   # element in the XML reply.
@@ -49,10 +50,15 @@ module FoxySync::Api
       node_set = document.xpath "//#{method_name}"
       return nil if node_set.nil? || node_set.empty?
 
-      contents = node_set.to_a
-      contents.map!{|node| node.content }
-      contents.delete_if{|content| content.empty? }
-      contents.size == 1 ? contents.first : contents
+      contents = []
+
+      node_set.children.each do |child|
+        next if child.element?
+        content = child.content.strip
+        contents << content unless content.empty?
+      end
+
+      contents.empty? ? nil : contents.size == 1 ? contents.first : contents
     end
   end
 end

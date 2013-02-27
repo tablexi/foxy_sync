@@ -19,7 +19,8 @@ describe FoxySync::Api::Response do
   it 'should return all matches if there is more than one' do
     attrs = api_response.attribute
     attrs.should be_a Array
-    attrs.size.should == 2
+    attrs.should include 'mightyvite'
+    attrs.should include 'wedding'
   end
 
 
@@ -35,6 +36,11 @@ describe FoxySync::Api::Response do
 
   it 'should return nil if the response doc does not have an element matching the method called' do
     api_response.foofam.should be_nil
+  end
+
+
+  it 'should return nil if the matched element has no text or cdata' do
+    api_response.attributes.should be_nil
   end
 
 end
