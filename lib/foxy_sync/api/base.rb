@@ -16,7 +16,7 @@ module FoxySync::Api
     #
     # Delegates to #api_response
     def respond_to?(method_name, include_private = false)
-      api_response.respond_to? method_name, include_private
+      super || api_response.respond_to?(method_name, include_private)
     end
 
 
