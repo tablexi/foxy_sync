@@ -3,17 +3,13 @@
 require 'spec_helper'
 
 describe FoxySync::Datafeed do
-
-  let :datafeed do
-    mock = double 'datafeed'
-    mock.class.send :include, FoxySync::Datafeed
-    mock
-  end
-
-  let(:result) { datafeed.datafeed_unwrap({ 'FoxyData' => ENCODED_ENCRYPTED }) }
+  include FoxySync::Datafeed
 
 
-  context 'datafeed request' do
+  let(:result) { datafeed_unwrap({ 'FoxyData' => ENCODED_ENCRYPTED }) }
+
+
+  describe 'datafeed request' do
     it 'should give an ::Api::Response' do
       result.should be_a FoxySync::Api::Response
     end
@@ -38,8 +34,11 @@ describe FoxySync::Datafeed do
 
 
   it 'should give the response text expected by FoxyCart' do
-    datafeed.datafeed_response.should == 'foxy'
+    datafeed_response.should == 'foxy'
   end
+
+
+  describe ''
 
 
   path = File.expand_path '../support/transaction.xml', File.dirname(__FILE__)
