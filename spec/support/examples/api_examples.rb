@@ -33,6 +33,6 @@ shared_examples 'api_setup' do
    api.customer_get :customer_email => email
   end
 
-  path = File.expand_path 'response.xml', File.dirname(__FILE__)
+  path = File.expand_path '../response.xml', File.dirname(__FILE__)
   API_REPLY = File.open(path, 'r').readlines(nil)[0]
 end
