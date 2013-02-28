@@ -1,0 +1,47 @@
+<foxydata>
+  <store_version>1.0</store_version>
+  <result>SUCCESS</result>
+  <messages>
+    <message>Customer Found</message>
+  </messages>
+  <customer_id><![CDATA[7946695]]></customer_id>
+  <last_modified_date><![CDATA[2013-01-27 12:44:58]]></last_modified_date>
+  <customer_first_name><![CDATA[]]></customer_first_name>
+  <customer_last_name><![CDATA[]]></customer_last_name>
+  <customer_company><![CDATA[]]></customer_company>
+  <customer_address1><![CDATA[]]></customer_address1>
+  <customer_address2><![CDATA[]]></customer_address2>
+  <customer_city><![CDATA[]]></customer_city>
+  <customer_state><![CDATA[]]></customer_state>
+  <customer_postal_code><![CDATA[]]></customer_postal_code>
+  <customer_country><![CDATA[US]]></customer_country>
+  <customer_phone><![CDATA[]]></customer_phone>
+  <customer_email><![CDATA[sam@gmail.com]]></customer_email>
+  <shipping_first_name><![CDATA[]]></shipping_first_name>
+  <shipping_last_name><![CDATA[]]></shipping_last_name>
+  <shipping_company><![CDATA[]]></shipping_company>
+  <shipping_address1><![CDATA[]]></shipping_address1>
+  <shipping_address2><![CDATA[]]></shipping_address2>
+  <shipping_city><![CDATA[]]></shipping_city>
+  <shipping_state><![CDATA[]]></shipping_state>
+  <shipping_postal_code><![CDATA[]]></shipping_postal_code>
+  <shipping_country><![CDATA[US]]></shipping_country>
+  <shipping_phone><![CDATA[]]></shipping_phone>
+  <customer_password><![CDATA[35c050a459b9289cadcb5ef1448dccdfdb08030c7f6d1ba7ac60fc3cf19cfc87]]></customer_password>
+  <customer_password_salt>
+    <![CDATA[PN8HNWhrFQEnymyqrkUS3uRIyhXzVw7Ab9dPZpav5JJxW8MhmyZjWLTkTGJI7KecPhSEwW1vwESiGwrTYk4KWRVGszjpbnsUzetZ]]></customer_password_salt>
+  <customer_password_hash_type><![CDATA[sha256_salted_suffix]]></customer_password_hash_type>
+  <customer_password_hash_config><![CDATA[070877]]></customer_password_hash_config>
+  <cc_type><![CDATA[]]></cc_type>
+  <cc_number_masked><![CDATA[]]></cc_number_masked>
+  <cc_exp_month><![CDATA[]]></cc_exp_month>
+  <cc_exp_year><![CDATA[]]></cc_exp_year>
+  <cc_start_date_month><![CDATA[]]></cc_start_date_month>
+  <cc_start_date_year><![CDATA[]]></cc_start_date_year>
+  <cc_issue_number><![CDATA[]]></cc_issue_number>
+  <shipto_addresses></shipto_addresses>
+  <attributes>
+    <attribute name="customer_type">mightyvite</attribute>
+    <attribute name="customer_event">wedding</attribute>
+  </attributes>
+</foxydata>

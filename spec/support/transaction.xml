@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foxydata>
+  <transactions>
+    <transaction>
+      <id><![CDATA[52768]]></id>
+      <store_id><![CDATA[9]]></store_id>
+      <store_version><![CDATA[0.7.0]]></store_version>
+      <is_test><![CDATA[1]]></is_test>
+      <is_hidden><![CDATA[0]]></is_hidden>
+      <data_is_fed><![CDATA[0]]></data_is_fed>
+      <transaction_date><![CDATA[2010-08-19 13:50:00]]></transaction_date>
+      <processor_response><![CDATA[Authorize.net Transaction ID:2154082729]]></processor_response>
+      <customer_id><![CDATA[193]]></customer_id>
+      <is_anonymous><![CDATA[0]]></is_anonymous>
+      <minfraud_score><![CDATA[0]]></minfraud_score>
+      <customer_first_name><![CDATA[Jörgé •™¡ªº]]></customer_first_name>
+      <customer_last_name><![CDATA[Cantú]]></customer_last_name>
+      <customer_company><![CDATA[-moz-bi ding:url(//businessi fo.co.uk/]]></customer_company>
+      <customer_address1><![CDATA[&amp;]]></customer_address1>
+      <customer_address2><![CDATA[]]></customer_address2>
+      <customer_city><![CDATA[seal beach]]></customer_city>
+      <customer_state><![CDATA[CA]]></customer_state>
+      <customer_postal_code><![CDATA[90740]]></customer_postal_code>
+      <customer_country><![CDATA[US]]></customer_country>
+      <customer_phone><![CDATA[]]></customer_phone>
+      <customer_email><![CDATA[test@example.com]]></customer_email>
+      <customer_ip><![CDATA[123.123.123.123]]></customer_ip>
+      <shipping_first_name><![CDATA[]]></shipping_first_name>
+      <shipping_last_name><![CDATA[]]></shipping_last_name>
+      <shipping_company><![CDATA[]]></shipping_company>
+      <shipping_address1><![CDATA[]]></shipping_address1>
+      <shipping_address2><![CDATA[]]></shipping_address2>
+      <shipping_city><![CDATA[]]></shipping_city>
+      <shipping_state><![CDATA[]]></shipping_state>
+      <shipping_postal_code><![CDATA[]]></shipping_postal_code>
+      <shipping_country><![CDATA[]]></shipping_country>
+      <shipping_phone><![CDATA[]]></shipping_phone>
+      <shipto_shipping_service_description><![CDATA[USPS Priority Mail Flat Rate Envelope]]></shipto_shipping_service_description>
+      <purchase_order><![CDATA[]]></purchase_order>
+      <cc_number_masked><![CDATA[xxxxxxxxxxxx4242]]></cc_number_masked>
+      <cc_type><![CDATA[Visa]]></cc_type>
+      <cc_exp_month><![CDATA[08]]></cc_exp_month>
+      <cc_exp_year><![CDATA[2013]]></cc_exp_year>
+      <cc_start_date_month><![CDATA[06]]></cc_start_date_month>
+      <cc_start_date_year><![CDATA[2008]]></cc_start_date_year>
+      <cc_issue_number><![CDATA[01]]></cc_issue_number>
+      <product_total><![CDATA[12.35]]></product_total>
+      <tax_total><![CDATA[0]]></tax_total>
+      <shipping_total><![CDATA[7.52]]></shipping_total>
+      <order_total><![CDATA[19.87]]></order_total>
+      <payment_gateway_type><![CDATA[authorize]]></payment_gateway_type>
+      <receipt_url><![CDATA[http://themancan.foxycart.com/receipt?id=28a313c5217794e89a989ccd69eefa40]]></receipt_url>
+      <taxes/>
+      <discounts/>
+      <attributes/>
+      <customer_password><![CDATA[2e29f4fa2efb67dc28860abf05523a1784829a90177c1477460e42da00f81659]]></customer_password>
+      <customer_password_salt><![CDATA[SSCtVKDnH1vAwuLyY2XHziIFv3fN5laN8DbYiIcUDBkZW2pP]]></customer_password_salt>
+      <customer_password_hash_type><![CDATA[sha256_salted_suffix]]></customer_password_hash_type>
+      <customer_password_hash_config><![CDATA[48]]></customer_password_hash_config>
+      <custom_fields>
+        <custom_field>
+          <custom_field_name><![CDATA[example_hidden]]></custom_field_name>
+          <custom_field_value><![CDATA[value_1]]></custom_field_value>
+          <custom_field_is_hidden><![CDATA[1]]></custom_field_is_hidden>
+        </custom_field>
+        <custom_field>
+          <custom_field_name><![CDATA[Hidden_Value]]></custom_field_name>
+          <custom_field_value><![CDATA[My Name Is_Jonas©;&amp;texture &amp;_ smoothness=rough||929274e2c2b22d8d51540d8bf657eef133121d7e67c05284687edcd8bfdcd946]]></custom_field_value>
+          <custom_field_is_hidden><![CDATA[1]]></custom_field_is_hidden>
+        </custom_field>
+      </custom_fields>
+      <transaction_details>
+        <transaction_detail>
+          <product_name><![CDATA[Example Product with Hex and Plus Spaces]]></product_name>
+          <product_price><![CDATA[10.00]]></product_price>
+          <product_quantity><![CDATA[2]]></product_quantity>
+          <product_weight><![CDATA[4.000]]></product_weight>
+          <product_code><![CDATA[abc123zzz]]></product_code>
+          <downloadable_url><![CDATA[]]></downloadable_url>
+          <sub_token_url><![CDATA[]]></sub_token_url>
+          <subscription_frequency><![CDATA[]]></subscription_frequency>
+          <subscription_startdate><![CDATA[0000-00-00]]></subscription_startdate>
+          <subscription_nextdate><![CDATA[0000-00-00]]></subscription_nextdate>
+          <subscription_enddate><![CDATA[0000-00-00]]></subscription_enddate>
+          <is_future_line_item>0</is_future_line_item>
+          <shipto><![CDATA[]]></shipto>
+          <category_description><![CDATA[Discount: Price: Percentage]]></category_description>
+          <category_code><![CDATA[discount_price_percentage]]></category_code>
+          <product_delivery_type><![CDATA[shipped]]></product_delivery_type>
+          <transaction_detail_options>
+            <transaction_detail_option>
+              <product_option_name><![CDATA[color]]></product_option_name>
+              <product_option_value><![CDATA[red]]></product_option_value>
+              <price_mod><![CDATA[-4.000]]></price_mod>
+              <weight_mod><![CDATA[0.000]]></weight_mod>
+            </transaction_detail_option>
+            <transaction_detail_option>
+              <product_option_name><![CDATA[Quantity Discount]]></product_option_name>
+              <product_option_value><![CDATA[$0.50]]></product_option_value>
+              <price_mod><![CDATA[0.500]]></price_mod>
+              <weight_mod><![CDATA[0.000]]></weight_mod>
+            </transaction_detail_option>
+            <transaction_detail_option>
+              <product_option_name><![CDATA[Price Discount Amount]]></product_option_name>
+              <product_option_value><![CDATA[-5%]]></product_option_value>
+              <price_mod><![CDATA[-0.325]]></price_mod>
+              <weight_mod><![CDATA[0.000]]></weight_mod>
+            </transaction_detail_option>
+          </transaction_detail_options>
+        </transaction_detail>
+      </transaction_details>
+      <shipto_addresses/>
+    </transaction>
+  </transactions>
+</foxydata>
