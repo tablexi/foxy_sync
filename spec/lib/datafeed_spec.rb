@@ -36,20 +36,4 @@ describe FoxySync::Datafeed do
   it 'should give the response text expected by FoxyCart' do
     datafeed_response.should == 'foxy'
   end
-
-
-  it 'should return the custom product options in a hash' do
-    options = datafeed_custom_product_options(result)
-    expect(options).to be_a Hash
-
-    expected_options = {
-      'color' => 'red',
-      'Quantity Discount' => '$0.50',
-      'Price Discount Amount' => '-5%'
-    }
-
-    expect(options.size).to eq expected_options.size
-    expected_options.each{|k, v| expect(options[k]).to eq v }
-  end
-
 end
