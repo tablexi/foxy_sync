@@ -1,6 +1,6 @@
 require 'net/http'
 
-shared_examples 'api_setup' do
+shared_examples 'api setup' do
 
   let(:api) { FoxySync::Api::Messenger.new }
 

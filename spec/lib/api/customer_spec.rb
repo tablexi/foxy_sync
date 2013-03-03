@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe FoxySync::Api::Customer do
-  include_examples 'api_setup'
+  include_examples 'api setup'
   include_examples 'base'
   include_examples 'user'
 

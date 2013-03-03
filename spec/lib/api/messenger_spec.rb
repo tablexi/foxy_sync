@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe FoxySync::Api::Messenger do
-  include_examples 'api_setup'
+  include_examples 'api setup'
 
 
   it 'should be the API URL' do

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe FoxySync::Sso do
   include FoxySync::Sso
 
-  include_examples 'api_setup'
+  include_examples 'api setup'
   include_examples 'user'
 
 
