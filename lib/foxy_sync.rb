@@ -12,7 +12,7 @@ module FoxySync
   module Xml
     autoload :Base,              'foxy_sync/xml/base'
     autoload :Document,          'foxy_sync/xml/document'
-    autoload :Transaction, 'foxy_sync/xml/transaction'
+    autoload :Transaction,       'foxy_sync/xml/transaction'
     autoload :TransactionDetail, 'foxy_sync/xml/transaction_detail'
   end
 
