@@ -5,13 +5,13 @@ module FoxySync::Xml
   class Transaction < Base
 
     #
-    # Returns an +Array+ of +Transaction+s from +transaction_doc+
-    # [_transaction_doc_]
-    #   A +FoxySync::Xml::Document+ that holds a transaction XML datafeed
-    def self.all(transaction_doc)
+    # Returns an +Array+ of the +Transaction+s in +xml_base+
+    # [_transactions_]
+    #   A +FoxySync::Xml::Base+ with a transactions element
+    def self.all(xml_base)
       transactions = []
 
-      transaction_doc.node.xpath('//transactions').each do |transaction|
+      xml_base.node.xpath('//transactions').each do |transaction|
         transactions << new(transaction)
       end
 
