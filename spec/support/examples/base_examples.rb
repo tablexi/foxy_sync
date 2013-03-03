@@ -1,7 +1,7 @@
 shared_examples 'base' do
   
   it 'should retain the API response' do
-    subject.api_response.should be_a FoxySync::Api::Response
+    subject.api_response.should be_a FoxySync::Xml::Document
   end
 
   it 'should delegate method_missing to the api_response' do

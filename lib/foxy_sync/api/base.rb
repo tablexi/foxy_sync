@@ -1,16 +1,17 @@
 module FoxySync::Api
   #
   # Intended for subclassing, +Base+ forms the foundation
-  # for ::Api:: classes that wrap an ::Api::Response object
-  # to provide behavior around specific data in the +Response+
+  # for ::Api:: classes that wrap a +FoxySync::Xml::Document+
+  # composed of API reply XML to provide behavior around
+  # specific elements
   class Base
-    attr_accessor :api_response
+    attr_reader :api_response
 
     #
     # [_api_response_]
-    #   A +FoxySync::Api::Response+ instance
+    #   A +FoxySync::Xml::Document+ that holds API reply XML
     def initialize(api_response)
-      self.api_response = api_response
+      @api_response = api_response
     end
 
     #
@@ -27,8 +28,8 @@ module FoxySync::Api
     end
 
 
-    def fc_api
-      @_fc_api ||= FoxySync::Api::Messenger.new
+    def messenger
+      @_messenger ||= FoxySync::Api::Messenger.new
     end
   end
 end

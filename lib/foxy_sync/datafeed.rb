@@ -9,8 +9,8 @@ module FoxySync
   module Datafeed
 
     #
-    # Handles the decoding and decrypting of a datafeed request.
-    # Returns a +FoxySync::Api::Response+ whose document is the datafeed XML
+    # Handles the decoding and decrypting of a datafeed.
+    # Returns a +FoxySync::Xml::Document+ whose #xml is the datafeed XML
     #[_params_]
     #  Something that responds_to? [] and has a key 'FoxyData'. In Rails
     #  that would be the +params+ object
@@ -18,7 +18,7 @@ module FoxySync
       encrypted = params['FoxyData']
       rc4 = RC4.new FoxySync.api_key
       xml = rc4.decrypt CGI::unescape(encrypted)
-      FoxySync::Api::Response.new xml
+      FoxySync::Xml::Document.new xml
     end
 
 

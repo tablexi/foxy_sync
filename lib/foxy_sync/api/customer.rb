@@ -20,21 +20,22 @@ module FoxySync::Api
     #   that work with authentication systems like +Devise+
     def initialize(user)
       self.user = user
-      super fc_api.customer_get :customer_email => user.email
+      super messenger.customer_get :customer_email => user.email
     end
 
 
     #
     # Sends the customer_save command to the FoxyCart API.
-    # Returns a FoxySync::Api::Response
+    # Returns a FoxySync::Xml::Document
     def save
       salt = user.password_salt
       hash = OpenSSL::HMAC.hexdigest 'sha256', salt, user.encrypted_password + salt
-      fc_api.customer_save(
+      messenger.customer_save(
         :customer_email => user.email,
         :customer_password_hash => hash,
         :customer_password_salt => salt
       )
     end
   end
+
 end

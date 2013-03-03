@@ -72,7 +72,7 @@ that handles the datafeed request, parse the request parameter and read the XML:
 ```
 
 ```params``` should respond to [] and hold the 'FoxyData' parameter that FoxyCart sends
-(in Rails that's the ```params``` object). ```xml``` would be a ```FoxySync::Api::Response```.
+(in Rails that's the ```params``` object). ```xml``` would be a ```FoxySync::Xml::Document```.
 FoxyCart expects a particular reply when responding to its datafeed requests. The reply can be
 sent using the ```datafeed_response``` method.
 
@@ -82,7 +82,7 @@ FoxyCart API
 
 You can access any part of the [FoxyCart API](http://wiki.foxycart.com/v/1.0/api) via the ```FoxySync::Api::Messenger```
 class. To use it create a new instance and then send it a message that corresponds to the FoxyCart API. All messages
-return an instance of ```FoxySync::Api::Response``` through which you can access FoxyCart's XML response. For Example:
+return an instance of ```FoxySync::Xml::Document``` through which you can access FoxyCart's XML response. For Example:
 ```
     api = FoxySync::Api::Messenger.new
     reply = api.customer_get :customer_email => 'foo@bar.com'

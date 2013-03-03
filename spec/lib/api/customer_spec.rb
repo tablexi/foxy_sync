@@ -24,7 +24,7 @@ describe FoxySync::Api::Customer do
 
     FoxySync::Api::Messenger.any_instance.should_receive(:customer_save).with(params)
     reply = subject.save
-    # reply.should be_a FoxySync::Api::Response # why won't this work?!
+    # reply.should be_a FoxySync::Xml::Document # why won't this work?!
   end
 
 end

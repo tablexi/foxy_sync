@@ -4,12 +4,15 @@ module FoxySync
   autoload :CartValidation, 'foxy_sync/cart_validation'
 
   module Api
-    autoload :Messenger,         'foxy_sync/api/messenger'
-    autoload :Response,          'foxy_sync/api/response'
-    autoload :Base,              'foxy_sync/api/base'
-    autoload :Customer,          'foxy_sync/api/customer'
-    autoload :NodeResponder,     'foxy_sync/api/node_responder'
-    autoload :TransactionDetail, 'foxy_sync/api/transaction_detail'
+    autoload :Base,      'foxy_sync/api/base'
+    autoload :Customer,  'foxy_sync/api/customer'
+    autoload :Messenger, 'foxy_sync/api/messenger'
+  end
+
+  module Xml
+    autoload :Base,              'foxy_sync/xml/base'
+    autoload :Document,          'foxy_sync/xml/document'
+    autoload :TransactionDetail, 'foxy_sync/xml/transaction_detail'
   end
 
 

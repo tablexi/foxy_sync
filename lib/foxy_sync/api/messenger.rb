@@ -7,7 +7,7 @@ module FoxySync::Api
   # the FoxyCart API (http://wiki.foxycart.com/v/1.0/api).
   # To use it create a new instance and then send it a message
   # that corresponds to the FoxyCart API. All messages
-  # return an instance of +FoxySync::Api::Response+. For Example:
+  # return an instance of +FoxySync::Xml::Document+. For Example:
   #
   # api = FoxySync::Api::Messenger.new
   # reply = api.customer_get :customer_email => 'foo@bar.com'
@@ -49,7 +49,7 @@ module FoxySync::Api
     def method_missing(method_name, *args, &block)
       return super unless respond_to? method_name
       xml = api_request method_name, args.first || {}
-      FoxySync::Api::Response.new xml
+      FoxySync::Xml::Document.new xml
     end
 
 

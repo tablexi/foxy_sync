@@ -10,8 +10,8 @@ describe FoxySync::Datafeed do
 
 
   describe 'datafeed request' do
-    it 'should give an ::Api::Response' do
-      result.should be_a FoxySync::Api::Response
+    it 'should give an ::Xml::Document' do
+      result.should be_a FoxySync::Xml::Document
     end
 
     it 'should produce a decoded and decrypted XML' do
