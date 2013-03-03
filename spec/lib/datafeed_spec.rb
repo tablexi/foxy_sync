@@ -6,7 +6,7 @@ describe FoxySync::Datafeed do
   include FoxySync::Datafeed
 
 
-  let(:result) { datafeed_unwrap({ 'FoxyData' => TransactionHelper::ENCODED_ENCRYPTED }) }
+  let(:result) { datafeed_unwrap({ 'FoxyData' => XmlHelper::TRANSACTION_ENCRYPTED }) }
 
 
   describe 'datafeed request' do
@@ -14,9 +14,8 @@ describe FoxySync::Datafeed do
       result.should be_a FoxySync::Api::Response
     end
 
-
     it 'should produce a decoded and decrypted XML' do
-      doc = Nokogiri::XML(TransactionHelper::DECODED_DECRYPTED) {|config| config.strict.nonet }
+      doc = Nokogiri::XML(XmlHelper::TRANSACTION_DECRYPTED) {|config| config.strict.nonet }
 
       %w(
         processor_response
@@ -31,7 +30,6 @@ describe FoxySync::Datafeed do
       end
     end
   end
-
 
   it 'should give the response text expected by FoxyCart' do
     datafeed_response.should == 'foxy'
