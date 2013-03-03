@@ -8,6 +8,7 @@ module FoxySync
     autoload :Response,          'foxy_sync/api/response'
     autoload :Base,              'foxy_sync/api/base'
     autoload :Customer,          'foxy_sync/api/customer'
+    autoload :NodeResponder,     'foxy_sync/api/node_responder'
     autoload :TransactionDetail, 'foxy_sync/api/transaction_detail'
   end
 
