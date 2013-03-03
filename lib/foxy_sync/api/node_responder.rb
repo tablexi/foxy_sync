@@ -1,10 +1,20 @@
 module FoxySync::Api
-
+  #
+  # Allows querying of the given +Nokogiri::XML::Node+.
+  # Every message will return +nil+ if no matching
+  # element is found in the XML or if the matched element(s)
+  # do not contain text or cdata. Returns a +String+ if
+  # there is one matching element in the reply. Returns an
+  # +Array+ with all element values if there is more than one
+  # matching element in the XML.
   class NodeResponder
 
     attr_reader :node
 
 
+    #
+    # [_node_]
+    #   A +Nokogiri::XML::Node+
     def initialize(node)
       @node = node
     end
