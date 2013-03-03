@@ -5,7 +5,7 @@ shared_examples 'base' do
   end
 
   it 'should delegate method_missing to the api_response' do
-    expect(subject.api_response).to_receive(:send).with :foofam, :fiddle
+    subject.api_response.should_receive(:send).with :foofam, :fiddle
     expect(subject.foofam(:fiddle)).to be_nil
   end
 

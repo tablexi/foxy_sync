@@ -23,6 +23,7 @@ describe FoxySync::Api::Customer do
     }
 
     FoxySync::Api::Messenger.any_instance.should_receive(:customer_save).with(params)
+    subject.save
   end
 
 end
