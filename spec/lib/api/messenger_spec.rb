@@ -6,21 +6,21 @@ describe FoxySync::Api::Messenger do
 
   it 'should be the API URL' do
     url = described_class.const_get(:URL)
-    url.host.should == FoxySync.store_url[FoxySync.store_url.rindex('/')+1..-1]
-    url.port.should == 443
-    url.request_uri.should == '/api'
+    expect(url.host).to eq FoxySync.store_url[FoxySync.store_url.rindex('/')+1..-1]
+    expect(url.port).to eq 443
+    expect(url.request_uri).to eq '/api'
   end
 
 
   it 'should respond_to api methods only' do
-    api.should_not respond_to :who
-    api.should respond_to :attribute_save
+    expect(api).to_not respond_to :who
+    expect(api).to respond_to :attribute_save
   end
 
 
   it 'should raise method missing error if non-api method called' do
-    lambda { api.who }.should raise_error NoMethodError
-    lambda { api.attribute_save }.should_not raise_error NoMethodError
+    expect(lambda { api.who }).to raise_error NoMethodError
+    expect(lambda { api.attribute_save }).to_not raise_error NoMethodError
   end
 
 
@@ -33,9 +33,9 @@ describe FoxySync::Api::Messenger do
 
     it 'should be a POST' do
       http.should_receive(:request) do |arg|
-        arg.should be_a Net::HTTP::Post
-        arg.form_data.should have_key(:api_action)
-        arg.form_data.should have_key(:api_token)
+        expect(arg).to be_a Net::HTTP::Post
+        expect(arg.form_data).to have_key(:api_action)
+        expect(arg.form_data).to have_key(:api_token)
       end
 
       api_request

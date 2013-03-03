@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+require 'nokogiri'
 require 'spec_helper'
 
 describe FoxySync::Datafeed do
@@ -11,7 +12,7 @@ describe FoxySync::Datafeed do
 
   describe 'datafeed request' do
     it 'should give an ::Xml::Document' do
-      result.should be_a FoxySync::Xml::Document
+      expect(result).to be_a FoxySync::Xml::Document
     end
 
     it 'should produce a decoded and decrypted XML' do
@@ -26,12 +27,12 @@ describe FoxySync::Datafeed do
         customer_email
         customer_country
       ).each do |elem|
-        result.send(elem).should == doc.xpath("//#{elem}").inner_text
+        expect(result.send(elem)).to eq doc.xpath("//#{elem}").inner_text
       end
     end
   end
 
   it 'should give the response text expected by FoxyCart' do
-    datafeed_response.should == 'foxy'
+    expect(datafeed_response).to eq 'foxy'
   end
 end

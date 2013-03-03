@@ -10,7 +10,7 @@ describe FoxySync::Api::Customer do
 
 
   it 'should assign the user' do
-    subject.user.should == user
+    expect(subject.user).to eq user
   end
 
   it 'should tell the API to save the customer' do
@@ -23,8 +23,6 @@ describe FoxySync::Api::Customer do
     }
 
     FoxySync::Api::Messenger.any_instance.should_receive(:customer_save).with(params)
-    reply = subject.save
-    # reply.should be_a FoxySync::Xml::Document # why won't this work?!
   end
 
 end

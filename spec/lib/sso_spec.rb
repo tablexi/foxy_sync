@@ -14,14 +14,14 @@ describe FoxySync::Sso do
 
   it 'should give the correct URL when no user is given' do
     url = sso_url params
-    url.should match fc_sso_url
+    expect(url).to match fc_sso_url
   end
 
   it 'should give the correct URL when a user is given' do
     cid = 3
     FoxySync::Api::Customer.any_instance.stub(:customer_id).and_return cid
     url = sso_url params, user
-    url.should match fc_sso_url cid
+    expect(url).to match fc_sso_url cid
   end
 
 
