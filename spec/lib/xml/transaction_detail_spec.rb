@@ -28,6 +28,7 @@ describe FoxySync::Xml::TransactionDetail do
 
   describe 'getting all details' do
     let(:details) { described_class.all document }
+    let(:detail) { details.first }
 
     it 'should have one detail' do
       expect(details.size).to eq 1
@@ -35,15 +36,15 @@ describe FoxySync::Xml::TransactionDetail do
     end
 
     it 'should have the right product_code' do
-      expect(details.first.product_code).to eq 'abc123zzz'
+      expect(detail.product_code).to eq document.product_code
     end
 
     it 'should have the right product name' do
-      expect(details.first.product_name).to eq 'Example Product with Hex and Plus Spaces'
+      expect(detail.product_name).to eq document.product_name
     end
 
     it 'should have the right product quantity' do
-      expect(details.first.product_quantity).to eq '2'
+      expect(detail.product_quantity).to eq document.product_quantity
     end
   end
 
