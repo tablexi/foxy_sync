@@ -18,7 +18,7 @@ module FoxySync
       encrypted = params['FoxyData']
       rc4 = RC4.new FoxySync.api_key
       xml = rc4.decrypt CGI::unescape(encrypted)
-      FoxySync::Xml::Document.new xml
+      FoxySync::Xml::Transaction.new xml
     end
 
 

@@ -3,22 +3,6 @@ module FoxySync::Xml
   # Provides methods to easily query the transaction_detail
   # elements found in a FoxyCart transaction XML datafeed
   class TransactionDetail < Base
-
-    #
-    # Returns an +Array+ of the +TransactionDetail+s in +xml_base+
-    # [_xml_base_]
-    #   A +FoxySync::Xml::Base+ that has a transaction_details element
-    def self.all(xml_base)
-      transactions = []
-
-      xml_base.node.xpath('//transaction_details').each do |detail|
-        transactions << new(detail)
-      end
-
-      transactions
-    end
-
-
     #
     # Returns custom product options in a 'name' => 'value' +Hash+
     def custom_product_options
@@ -33,7 +17,5 @@ module FoxySync::Xml
 
       options
     end
-
   end
-
 end

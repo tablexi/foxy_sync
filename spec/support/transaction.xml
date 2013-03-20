@@ -59,13 +59,13 @@
       <customer_password_hash_config><![CDATA[48]]></customer_password_hash_config>
       <custom_fields>
         <custom_field>
-          <custom_field_name><![CDATA[example_hidden]]></custom_field_name>
-          <custom_field_value><![CDATA[value_1]]></custom_field_value>
+          <custom_field_name><![CDATA[Held_On]]></custom_field_name>
+          <custom_field_value><![CDATA[10/1/11]]></custom_field_value>
           <custom_field_is_hidden><![CDATA[1]]></custom_field_is_hidden>
         </custom_field>
         <custom_field>
-          <custom_field_name><![CDATA[Hidden_Value]]></custom_field_name>
-          <custom_field_value><![CDATA[My Name Is_Jonas©;&amp;texture &amp;_ smoothness=rough||929274e2c2b22d8d51540d8bf657eef133121d7e67c05284687edcd8bfdcd946]]></custom_field_value>
+          <custom_field_name><![CDATA[Occassion]]></custom_field_name>
+          <custom_field_value><![CDATA[wedding]]></custom_field_value>
           <custom_field_is_hidden><![CDATA[1]]></custom_field_is_hidden>
         </custom_field>
       </custom_fields>

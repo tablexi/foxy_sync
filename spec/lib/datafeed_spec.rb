@@ -11,8 +11,8 @@ describe FoxySync::Datafeed do
 
 
   describe 'datafeed request' do
-    it 'should give an ::Xml::Document' do
-      expect(result).to be_a FoxySync::Xml::Document
+    it 'should give an ::Xml::Transaction' do
+      expect(result).to be_a FoxySync::Xml::Transaction
     end
 
     it 'should produce a decoded and decrypted XML' do
