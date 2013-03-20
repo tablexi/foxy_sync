@@ -72,7 +72,7 @@ that handles the datafeed request, parse the request parameter and read the XML:
 ```
 
 ```params``` should respond to [] and hold the 'FoxyData' parameter that FoxyCart sends
-(in Rails that's the ```params``` object). ```xml``` would be a ```FoxySync::Xml::Document```.
+(in Rails that's the ```params``` object). ```xml``` would be a ```FoxySync::Xml::Transaction```.
 FoxyCart expects a particular reply when responding to its datafeed requests. The reply can be
 sent using the ```datafeed_response``` method.
 
