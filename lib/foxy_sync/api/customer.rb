@@ -36,6 +36,12 @@ module FoxySync::Api
         :customer_password_salt => salt
       )
     end
-  end
 
+
+    #
+    # Returns true if FoxyCart has a record of this customer, false otherwise
+    def found?
+      !(api_response.message =~ /Customer Found/i).nil?
+    end
+  end
 end

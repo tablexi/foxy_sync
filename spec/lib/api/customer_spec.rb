@@ -26,4 +26,16 @@ describe FoxySync::Api::Customer do
     subject.save
   end
 
+
+  describe 'determining if FoxyCart knows the user' do
+    it 'should say the user was found' do
+      expect(subject.found?).to be_true
+    end
+
+    it 'should say the user was not found' do
+      subject.api_response.node.at_xpath('//message').content = 'customer not found'
+      expect(subject.found?).to be_false
+    end
+  end
+
 end
