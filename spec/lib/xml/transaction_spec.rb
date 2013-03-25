@@ -9,7 +9,7 @@ describe FoxySync::Xml::Transaction do
     expect(fields).to be_a Hash
 
     expected_options = {
-      'Occassion' => 'wedding',
+      'Occasion' => 'wedding',
       'Held_On' => '10/1/11'
     }
 
