@@ -1,4 +1,4 @@
-shared_examples 'base' do
+shared_examples 'api base' do
   
   it 'should retain the API response' do
     expect(subject.api_response).to be_a FoxySync::Xml::Document
