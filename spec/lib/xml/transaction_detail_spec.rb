@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe FoxySync::Xml::TransactionDetail do
-  include_examples 'transaction'
-
+  include_examples 'xml base'
 
   let :detail do
+    transaction = FoxySync::Xml::Transaction.new XmlHelper::TRANSACTION_DECRYPTED
     described_class.new transaction.node.at_xpath('//transaction_detail')
   end
 
