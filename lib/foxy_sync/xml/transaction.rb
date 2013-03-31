@@ -8,7 +8,7 @@ module FoxySync::Xml
       unless @details
         @details = []
 
-        node.xpath('//transaction_detail').each do |detail|
+        node.xpath('.//transaction_detail').each do |detail|
           @details << TransactionDetail.new(detail)
         end
       end
@@ -21,7 +21,7 @@ module FoxySync::Xml
     # Returns custom fields in a 'name' => 'value' +Hash+
     def custom_fields
       fields = {}
-      fields_xml = node.xpath '//custom_field'
+      fields_xml = node.xpath './/custom_field'
 
       fields_xml.each do |node|
         name = node.at_css('custom_field_name').content.strip

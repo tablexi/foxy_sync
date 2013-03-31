@@ -5,7 +5,7 @@ describe FoxySync::Xml::TransactionDetail do
 
   let :detail do
     transaction = FoxySync::Xml::Transaction.new XmlHelper::TRANSACTION_DECRYPTED
-    described_class.new transaction.node.at_xpath('//transaction_detail')
+    described_class.new transaction.node.at_xpath('.//transaction_detail')
   end
 
 

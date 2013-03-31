@@ -27,7 +27,7 @@ describe FoxySync::Datafeed do
         customer_email
         customer_country
       ).each do |elem|
-        expect(result.send(elem)).to eq doc.xpath("//#{elem}").inner_text.strip
+        expect(result.send(elem)).to eq doc.xpath(".//#{elem}").inner_text.strip
       end
     end
   end

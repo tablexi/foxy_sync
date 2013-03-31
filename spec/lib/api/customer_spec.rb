@@ -33,7 +33,7 @@ describe FoxySync::Api::Customer do
     end
 
     it 'should say the user was not found' do
-      subject.api_response.node.at_xpath('//message').content = 'customer not found'
+      subject.api_response.node.at_xpath('.//message').content = 'customer not found'
       expect(subject.found?).to be_false
     end
   end
