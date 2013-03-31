@@ -35,7 +35,8 @@
       <shipping_postal_code><![CDATA[]]></shipping_postal_code>
       <shipping_country><![CDATA[]]></shipping_country>
       <shipping_phone><![CDATA[]]></shipping_phone>
-      <shipto_shipping_service_description><![CDATA[USPS Priority Mail Flat Rate Envelope]]></shipto_shipping_service_description>
+      <shipto_shipping_service_description>
+        <![CDATA[USPS Priority Mail Flat Rate Envelope]]></shipto_shipping_service_description>
       <purchase_order><![CDATA[]]></purchase_order>
       <cc_number_masked><![CDATA[xxxxxxxxxxxx4242]]></cc_number_masked>
       <cc_type><![CDATA[Visa]]></cc_type>
@@ -107,6 +108,98 @@
               <weight_mod><![CDATA[0.000]]></weight_mod>
             </transaction_detail_option>
           </transaction_detail_options>
+        </transaction_detail>
+        <transaction_detail>
+          <product_name><![CDATA[1 qr code]]></product_name>
+          <product_price><![CDATA[15]]></product_price>
+          <product_quantity><![CDATA[1]]></product_quantity>
+          <product_weight><![CDATA[0.000]]></product_weight>
+          <product_code><![CDATA[qr]]></product_code>
+          <image><![CDATA[]]></image>
+          <url><![CDATA[]]></url>
+          <length><![CDATA[0]]></length>
+          <width><![CDATA[0]]></width>
+          <height><![CDATA[0]]></height>
+          <downloadable_url><![CDATA[]]></downloadable_url>
+          <sub_token_url><![CDATA[]]></sub_token_url>
+          <subscription_frequency><![CDATA[]]></subscription_frequency>
+          <subscription_startdate><![CDATA[0000-00-00]]></subscription_startdate>
+          <subscription_nextdate><![CDATA[0000-00-00]]></subscription_nextdate>
+          <subscription_enddate><![CDATA[0000-00-00]]></subscription_enddate>
+          <is_future_line_item><![CDATA[0]]></is_future_line_item>
+          <shipto><![CDATA[]]></shipto>
+          <category_description><![CDATA[Accessories]]></category_description>
+          <category_code><![CDATA[accessories]]></category_code>
+          <product_delivery_type><![CDATA[notshipped]]></product_delivery_type>
+          <transaction_detail_options></transaction_detail_options>
+        </transaction_detail>
+        <transaction_detail>
+          <product_name>
+            <![CDATA[100 4x6 digital save the dates printed on pearl paper in a catskill design]]></product_name>
+          <product_price><![CDATA[155.95]]></product_price>
+          <product_quantity><![CDATA[1]]></product_quantity>
+          <product_weight><![CDATA[8.000]]></product_weight>
+          <product_code><![CDATA[sav]]></product_code>
+          <image><![CDATA[]]></image>
+          <url><![CDATA[]]></url>
+          <length><![CDATA[0]]></length>
+          <width><![CDATA[0]]></width>
+          <height><![CDATA[0]]></height>
+          <downloadable_url><![CDATA[]]></downloadable_url>
+          <sub_token_url><![CDATA[]]></sub_token_url>
+          <subscription_frequency><![CDATA[]]></subscription_frequency>
+          <subscription_startdate><![CDATA[0000-00-00]]></subscription_startdate>
+          <subscription_nextdate><![CDATA[0000-00-00]]></subscription_nextdate>
+          <subscription_enddate><![CDATA[0000-00-00]]></subscription_enddate>
+          <is_future_line_item><![CDATA[0]]></is_future_line_item>
+          <shipto><![CDATA[]]></shipto>
+          <category_description><![CDATA[Default for all products]]></category_description>
+          <category_code><![CDATA[DEFAULT]]></category_code>
+          <product_delivery_type><![CDATA[shipped]]></product_delivery_type>
+          <transaction_detail_options>
+            <transaction_detail_option>
+              <product_option_name><![CDATA[design_name]]></product_option_name>
+              <product_option_value><![CDATA[catskill]]></product_option_value>
+              <price_mod><![CDATA[0]]></price_mod>
+              <weight_mod><![CDATA[0.000]]></weight_mod>
+            </transaction_detail_option>
+            <transaction_detail_option>
+              <product_option_name><![CDATA[color_1]]></product_option_name>
+              <product_option_value><![CDATA[lemongrass]]></product_option_value>
+              <price_mod><![CDATA[0]]></price_mod>
+              <weight_mod><![CDATA[0.000]]></weight_mod>
+            </transaction_detail_option>
+            <transaction_detail_option>
+              <product_option_name><![CDATA[color_2]]></product_option_name>
+              <product_option_value><![CDATA[crimson]]></product_option_value>
+              <price_mod><![CDATA[0]]></price_mod>
+              <weight_mod><![CDATA[0.000]]></weight_mod>
+            </transaction_detail_option>
+          </transaction_detail_options>
+        </transaction_detail>
+        <transaction_detail>
+          <product_name><![CDATA[200 mail services]]></product_name>
+          <product_price><![CDATA[90]]></product_price>
+          <product_quantity><![CDATA[1]]></product_quantity>
+          <product_weight><![CDATA[0.000]]></product_weight>
+          <product_code><![CDATA[mai]]></product_code>
+          <image><![CDATA[]]></image>
+          <url><![CDATA[]]></url>
+          <length><![CDATA[0]]></length>
+          <width><![CDATA[0]]></width>
+          <height><![CDATA[0]]></height>
+          <downloadable_url><![CDATA[]]></downloadable_url>
+          <sub_token_url><![CDATA[]]></sub_token_url>
+          <subscription_frequency><![CDATA[]]></subscription_frequency>
+          <subscription_startdate><![CDATA[0000-00-00]]></subscription_startdate>
+          <subscription_nextdate><![CDATA[0000-00-00]]></subscription_nextdate>
+          <subscription_enddate><![CDATA[0000-00-00]]></subscription_enddate>
+          <is_future_line_item><![CDATA[0]]></is_future_line_item>
+          <shipto><![CDATA[]]></shipto>
+          <category_description><![CDATA[Accessories]]></category_description>
+          <category_code><![CDATA[accessories]]></category_code>
+          <product_delivery_type><![CDATA[notshipped]]></product_delivery_type>
+          <transaction_detail_options></transaction_detail_options>
         </transaction_detail>
       </transaction_details>
       <shipto_addresses/>
