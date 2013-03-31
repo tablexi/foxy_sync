@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'foxy_sync'
-  s.version     = '0.3.0'
+  s.version     = '0.3.1'
   s.homepage    = 'https://github.com/tablexi/foxy_sync'
   s.summary     = 'Synchronizes your Ruby application with FoxyCart'
   s.description = 'Encapsulates FoxyCart SSO, datafeed, and cart validation protocols'
