@@ -7,7 +7,7 @@ module FoxySync::Xml
     # Returns custom product options in a 'name' => 'value' +Hash+
     def custom_product_options
       options = {}
-      options_xml = node.xpath '//transaction_detail_option'
+      options_xml = node.xpath './/transaction_detail_option'
 
       options_xml.each do |node|
         name = node.at_css('product_option_name').content.strip

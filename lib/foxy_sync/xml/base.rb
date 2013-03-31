@@ -29,7 +29,7 @@ module FoxySync::Xml
     private
 
     def method_missing(method_name, *args, &block)
-      node_set = node.xpath "//#{method_name}"
+      node_set = node.xpath ".//#{method_name}"
       return nil if node_set.nil? || node_set.empty?
 
       contents = []
