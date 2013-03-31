@@ -8,7 +8,7 @@ module FoxySync::Xml
       unless @details
         @details = []
 
-        node.xpath('//transaction_details').each do |detail|
+        node.xpath('//transaction_detail').each do |detail|
           @details << TransactionDetail.new(detail)
         end
       end
