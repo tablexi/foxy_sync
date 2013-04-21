@@ -28,12 +28,10 @@ module FoxySync::Api
     # Sends the customer_save command to the FoxyCart API.
     # Returns a FoxySync::Xml::Document
     def save
-      salt = user.password_salt
-      hash = OpenSSL::HMAC.hexdigest 'sha256', salt, user.encrypted_password + salt
       messenger.customer_save(
         :customer_email => user.email,
-        :customer_password_hash => hash,
-        :customer_password_salt => salt
+        :customer_password_hash => user.encrypted_password,
+        :customer_password_salt => user.password_salt
       )
     end
 

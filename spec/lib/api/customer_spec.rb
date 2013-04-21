@@ -14,12 +14,10 @@ describe FoxySync::Api::Customer do
   end
 
   it 'should tell the API to save the customer' do
-    salt = user.password_salt
-    hash = OpenSSL::HMAC.hexdigest 'sha256', salt, user.encrypted_password + salt
     params = {
       :customer_email => user.email,
-      :customer_password_hash => hash,
-      :customer_password_salt => salt
+      :customer_password_hash => user.encrypted_password,
+      :customer_password_salt => user.password_salt
     }
 
     FoxySync::Api::Messenger.any_instance.should_receive(:customer_save).with(params)
